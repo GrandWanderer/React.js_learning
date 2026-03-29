@@ -90,6 +90,17 @@ img {
   line-height: 1.7;
 }
 
+.visited-summary {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background-color: #ecf8ef;
+  color: #1d7a3f;
+  font-weight: 700;
+}
+
 .header-nav {
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +218,11 @@ img {
     box-shadow 0.25s ease;
 }
 
+.destination-card.visited {
+  border-color: rgba(42, 148, 90, 0.4);
+  box-shadow: 0 18px 34px rgba(42, 148, 90, 0.16);
+}
+
 .destination-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 24px 40px rgba(31, 58, 86, 0.16);
@@ -220,6 +236,27 @@ img {
 
 .destination-content {
   padding: 1.3rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.status-badge.planned {
+  background-color: #eef2f7;
+  color: #59697a;
+}
+
+.status-badge.visited {
+  background-color: #e8f7ed;
+  color: #1d7a3f;
 }
 
 .destination-meta {
@@ -272,6 +309,10 @@ img {
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
+}
+
+.details-button.visited {
+  background: linear-gradient(135deg, #2a945a, #3eb874);
 }
 
 .details-button:hover {

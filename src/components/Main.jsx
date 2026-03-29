@@ -1,6 +1,12 @@
 import DestinationList from './DestinationList';
 
-function Main({ sectionTitle, introText, categories, destinations }) {
+function Main({
+  sectionTitle,
+  introText,
+  categories,
+  destinations,
+  onToggleVisited,
+}) {
   return (
     <main className="site-main">
       <div className="container">
@@ -25,7 +31,10 @@ function Main({ sectionTitle, introText, categories, destinations }) {
           </div>
         </section>
 
-        <DestinationList destinations={destinations} />
+        <DestinationList
+          destinations={destinations}
+          onToggleVisited={onToggleVisited}
+        />
       </div>
     </main>
   );

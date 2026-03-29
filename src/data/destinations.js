@@ -9,6 +9,7 @@ const destinations = [
     category: 'City Break',
     image:
       'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80',
+    visited: true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const destinations = [
     category: 'Historical',
     image:
       'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&q=80',
+    visited: false,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const destinations = [
     category: 'Beach',
     image:
       'https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=900&q=80',
+    visited: false,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const destinations = [
     category: 'Cultural',
     image:
       'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80',
+    visited: true,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const destinations = [
     category: 'Beach',
     image:
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80',
+    visited: false,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const destinations = [
     category: 'Historical',
     image:
       'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=900&q=80',
+    visited: false,
   },
 ];
 
