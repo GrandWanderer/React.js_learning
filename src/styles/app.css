@@ -167,6 +167,9 @@ img {
 }
 
 .filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--border-color);
   background-color: #ffffff;
   color: var(--text-color);
@@ -258,14 +261,27 @@ img {
   line-height: 1.7;
 }
 
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.price-label {
+  color: var(--primary-color);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .details-button {
-  width: 100%;
   border: none;
   border-radius: 14px;
   padding: 0.9rem 1rem;
   background: linear-gradient(135deg, var(--primary-color), #2c80bf);
   color: #ffffff;
   font-weight: 700;
+  min-width: 140px;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
@@ -331,5 +347,14 @@ img {
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .price-label {
+    white-space: normal;
   }
 }

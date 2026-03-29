@@ -1,24 +1,30 @@
 import DestinationList from './DestinationList';
-import FilterBar from './FilterBar';
 
-function Main({ destinations }) {
+function Main({ sectionTitle, introText, categories, destinations }) {
   return (
     <main className="site-main">
       <div className="container">
         <section className="intro-section" id="popular">
           <div className="section-heading">
             <p className="section-label">Featured Collection</p>
-            <h2>Popular travel destinations for inspiration</h2>
+            <h2>{sectionTitle}</h2>
           </div>
-          <p className="intro-text">
-            This educational React page presents a curated collection of
-            well-known places for tourism, cultural trips, and relaxing city
-            breaks. Each destination card highlights a short description,
-            category, and visitor rating in a clean and simple layout.
-          </p>
+          <p className="intro-text">{introText}</p>
         </section>
 
-        <FilterBar />
+        <section className="category-section" aria-label="Travel categories">
+          <div className="filter-bar">
+            {categories.map((category, index) => (
+              <span
+                key={category}
+                className={`filter-button ${index === 0 ? 'active' : ''}`}
+              >
+                {category}
+              </span>
+            ))}
+          </div>
+        </section>
+
         <DestinationList destinations={destinations} />
       </div>
     </main>

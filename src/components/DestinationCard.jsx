@@ -1,6 +1,11 @@
-function DestinationCard({ destination }) {
-  const { name, country, description, rating, category, image } = destination;
-
+function DestinationCard({
+  image,
+  name,
+  country,
+  description,
+  rating,
+  category,
+}) {
   return (
     <article className="destination-card">
       <img
@@ -20,9 +25,12 @@ function DestinationCard({ destination }) {
         </h3>
         <p className="destination-description">{description}</p>
 
-        <button type="button" className="details-button">
-          View Details
-        </button>
+        <div className="card-footer">
+          <span className="price-label">From $799</span>
+          <button type="button" className="details-button">
+            View Details
+          </button>
+        </div>
       </div>
     </article>
   );
