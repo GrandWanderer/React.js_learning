@@ -1,11 +1,11 @@
 import travelHero from '../assets/travel-hero.svg';
 
-function Header({ title, subtitle, navItems }) {
+function Header({ label, title, subtitle, navItems }) {
   return (
     <header className="site-header">
       <div className="container header-layout">
         <div className="header-content">
-          <p className="eyebrow">Laboratory Work No. 2</p>
+          <p className="eyebrow">{label}</p>
           <h1>{title}</h1>
           <p className="header-subtitle">{subtitle}</p>
 

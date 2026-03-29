@@ -4,8 +4,9 @@ import Footer from './components/Footer';
 import destinations from './data/destinations';
 
 function App() {
-  const title = 'Travel Destinations';
+  const appTitle = 'Travel Destinations';
   const subtitle = 'Explore beautiful places around the world';
+  const headerLabel = 'Laboratory Work No. 2';
   const sectionTitle = 'Popular travel destinations for inspiration';
   const introText =
     'This static React application demonstrates component hierarchy and one-way data flow by passing travel destination data from App to nested presentation components.';
@@ -16,7 +17,12 @@ function App() {
   return (
     <>
       <div className="page-shell">
-        <Header title={title} subtitle={subtitle} navItems={navItems} />
+        <Header
+          label={headerLabel}
+          title={appTitle}
+          subtitle={subtitle}
+          navItems={navItems}
+        />
         <Main
           sectionTitle={sectionTitle}
           introText={introText}
