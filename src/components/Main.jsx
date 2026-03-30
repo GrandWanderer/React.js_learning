@@ -1,3 +1,4 @@
+import AddDestinationForm from './AddDestinationForm';
 import DestinationList from './DestinationList';
 import FilterBar from './FilterBar';
 
@@ -11,6 +12,7 @@ function Main({
   filterOptions,
   onFilterChange,
   onToggleVisited,
+  onAddDestination,
 }) {
   return (
     <main className="site-main">
@@ -35,6 +37,11 @@ function Main({
             ))}
           </div>
         </section>
+
+        <AddDestinationForm
+          onAddDestination={onAddDestination}
+          categories={categories}
+        />
 
         <div className="results-summary">
           Showing {destinations.length} of {fullDestinationsCount} destinations

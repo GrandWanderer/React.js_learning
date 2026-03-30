@@ -7,10 +7,10 @@ import initialDestinations from './data/destinations';
 function App() {
   const appTitle = 'Travel Destinations';
   const subtitle = 'Explore beautiful places around the world';
-  const headerLabel = 'Laboratory Work No. 4';
+  const headerLabel = 'Laboratory Work No. 5';
   const sectionTitle = 'Popular travel destinations for inspiration';
   const introText =
-    'Switch between all, visited, and planned destinations while keeping the visited status interactive on every travel card.';
+    'Add your own destination, switch between all, visited, and planned modes, and update travel status directly from each card.';
   const navItems = ['Popular', 'Europe', 'Asia'];
   const categories = ['City Break', 'Historical', 'Beach', 'Cultural'];
   const footerText = 'Created for Laboratory Work on React';
@@ -26,6 +26,13 @@ function App() {
           : destination
       )
     );
+  };
+
+  const addDestination = (newDestination) => {
+    setDestinations((previousDestinations) => [
+      newDestination,
+      ...previousDestinations,
+    ]);
   };
 
   const visitedCount = destinations.filter(
@@ -64,6 +71,7 @@ function App() {
           filterOptions={filterOptions}
           onFilterChange={setFilterMode}
           onToggleVisited={handleToggleVisited}
+          onAddDestination={addDestination}
         />
         <Footer
           year={2026}
