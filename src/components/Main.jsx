@@ -1,10 +1,15 @@
 import DestinationList from './DestinationList';
+import FilterBar from './FilterBar';
 
 function Main({
   sectionTitle,
   introText,
   categories,
   destinations,
+  fullDestinationsCount,
+  filterMode,
+  filterOptions,
+  onFilterChange,
   onToggleVisited,
 }) {
   return (
@@ -31,8 +36,19 @@ function Main({
           </div>
         </section>
 
+        <div className="results-summary">
+          Showing {destinations.length} of {fullDestinationsCount} destinations
+        </div>
+
+        <FilterBar
+          filterMode={filterMode}
+          filterOptions={filterOptions}
+          onFilterChange={onFilterChange}
+        />
+
         <DestinationList
           destinations={destinations}
+          filterMode={filterMode}
           onToggleVisited={onToggleVisited}
         />
       </div>
